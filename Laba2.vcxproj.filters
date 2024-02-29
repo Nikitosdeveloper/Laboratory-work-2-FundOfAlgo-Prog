@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\Stack">
+      <UniqueIdentifier>{0382ea9e-4e0a-4ad5-877f-2a4e0d04393e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\SinglieList">
+      <UniqueIdentifier>{665b7b60-934f-443d-a4ba-57070ade567c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Queue">
+      <UniqueIdentifier>{689f46e0-f2fb-41ae-8180-82b4773df990}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Stack">
+      <UniqueIdentifier>{9e01d41d-0119-47a9-b02c-20fcab7e4433}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\SingleList">
+      <UniqueIdentifier>{c480cd91-4784-4a32-bab1-951429d87d1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Queue">
+      <UniqueIdentifier>{ebe49a21-529c-406a-a3d4-4401e8398aaf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Student.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="StackChar.h">
+      <Filter>Файлы заголовков\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="StackStudent.h">
+      <Filter>Файлы заголовков\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleLinkedList.h">
+      <Filter>Файлы заголовков\SingleList</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleStudentLinkedList.h">
+      <Filter>Файлы заголовков\SingleList</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>Файлы заголовков\Queue</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Student.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="StackChar.cpp">
+      <Filter>Исходные файлы\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="StackStudent.cpp">
+      <Filter>Исходные файлы\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleLinkedList.cpp">
+      <Filter>Исходные файлы\SinglieList</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleStudentLinkedList.cpp">
+      <Filter>Исходные файлы\SinglieList</Filter>
+    </ClCompile>
+    <ClCompile Include="Queue.cpp">
+      <Filter>Исходные файлы\Queue</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
