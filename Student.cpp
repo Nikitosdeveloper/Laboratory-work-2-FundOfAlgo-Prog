@@ -23,7 +23,7 @@ Student::Student(std::string surname, std::string inicials, int yearOfBirth, int
 	yearOfAdmission_ = yearOfAdmission;
 	yearOfBirth_ = yearOfBirth;
 	studentsRecordBook_ = studentsRecordBook;
-
+	calculateMiddleMark();
 }
 
 Student::Student()
@@ -63,7 +63,16 @@ bool Student::operator==(const Student& other)
 	return this->surname_ == other.surname_;
 }
 
-void Student::russianAlphabet_()
+void Student::calculateMiddleMark()
+{
+	studentsRecordBook_.middleMark = (double)(
+		studentsRecordBook_.computerScienceMark +
+		studentsRecordBook_.higherMathMark +
+		studentsRecordBook_.physicsMark
+		) / 3;
+}
+
+void Student::russianAlphabet()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);

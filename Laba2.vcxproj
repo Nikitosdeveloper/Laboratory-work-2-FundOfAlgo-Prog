@@ -133,6 +133,7 @@
     <ClInclude Include="StackChar.h" />
     <ClInclude Include="StackStudent.h" />
     <ClInclude Include="Student.h" />
+    <ClInclude Include="StudentList.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Queue.cpp" />
@@ -142,6 +143,10 @@
     <ClCompile Include="StackChar.cpp" />
     <ClCompile Include="StackStudent.cpp" />
     <ClCompile Include="Student.cpp" />
+    <ClCompile Include="StudentList.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Students.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

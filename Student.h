@@ -35,17 +35,9 @@ public:
 
 	bool operator==(const Student& other);
 
+	void calculateMiddleMark();
 
-
-private:
-
-	std::string surname_;
-	std::string inicials_;
-	int yearOfBirth_;
-	int yearOfAdmission_;
-	RecordBook studentsRecordBook_;
-
-	static void russianAlphabet_();
+	static void russianAlphabet();
 
 	static std::string inputSurname();
 	static std::string inputInitials();
@@ -62,6 +54,18 @@ private:
 	static const int CODE_HIGHER_MATH = 2;
 	static const int CODE_COMPUTER_SCIENCE = 3;
 
+	
+
+private:
+
+	std::string surname_;
+	std::string inicials_;
+	int yearOfBirth_;
+	int yearOfAdmission_;
+	RecordBook studentsRecordBook_;
+
+	friend class StudentList;
+	
 };
 
 

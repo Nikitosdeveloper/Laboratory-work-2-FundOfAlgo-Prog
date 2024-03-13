@@ -25,6 +25,9 @@ public:
 	~SingleSortedLinkedList();
 
 	void insert(int element);
+
+	void insert(int element, int postition);
+
 	bool delFirstOccurrence(int element);
 	bool isEmpty() const;
 	void printList();

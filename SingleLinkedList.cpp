@@ -30,20 +30,48 @@ void SingleSortedLinkedList::insert(int element)
 	ListNode* newElement = new ListNode;
 	newElement->data = element;
 	newElement->nextNode = nullptr;
-	ListNode* ptrRrevious = nullptr;
+	ListNode* ptrPrevious = nullptr;
 
 	while (ptr != nullptr && ptr->data < element )
 	{
-		ptrRrevious = ptr;
+		ptrPrevious = ptr;
 		ptr = ptr->nextNode;
 	}
-	if (ptrRrevious == nullptr) {
+	if (ptrPrevious == nullptr) {
 
 		newElement->nextNode = beginList_;
 		beginList_ = newElement;
 	}
 	else {
-		ptrRrevious->nextNode = newElement;
+		ptrPrevious->nextNode = newElement;
+		newElement->nextNode = ptr;
+	}
+	size_++;
+}
+
+void SingleSortedLinkedList::insert(int element, int postition)
+{
+	ListNode* ptr = beginList_;
+
+	ListNode* newElement = new ListNode;
+	newElement->data = element;
+	newElement->nextNode = nullptr;
+	ListNode* ptrPrevious = nullptr;
+	postition--;
+	while (postition-- && ptr != nullptr)
+	{
+		ptrPrevious = ptr;
+		ptr = ptr->nextNode;
+
+	}
+
+	if (ptrPrevious == nullptr) {
+
+		newElement->nextNode = beginList_;
+		beginList_ = newElement;
+	}
+	else {
+		ptrPrevious->nextNode = newElement;
 		newElement->nextNode = ptr;
 	}
 	size_++;

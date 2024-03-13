@@ -51,6 +51,9 @@
     <ClInclude Include="Queue.h">
       <Filter>Файлы заголовков\Queue</Filter>
     </ClInclude>
+    <ClInclude Include="StudentList.h">
+      <Filter>Файлы заголовков\SingleList</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -74,5 +77,13 @@
     <ClCompile Include="Queue.cpp">
       <Filter>Исходные файлы\Queue</Filter>
     </ClCompile>
+    <ClCompile Include="StudentList.cpp">
+      <Filter>Исходные файлы\SinglieList</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Students.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
   </ItemGroup>
 </Project>
