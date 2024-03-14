@@ -1,4 +1,5 @@
 #pragma once
+#include "Student.h"
 #include<iostream>
 #include <windows.h>
 
@@ -37,6 +38,8 @@ public:
 	int findMin();
 	bool delAllOccurrence(int element);
 	bool delAllRepetitions(int element);
+
+	void menu();
 
 };
 

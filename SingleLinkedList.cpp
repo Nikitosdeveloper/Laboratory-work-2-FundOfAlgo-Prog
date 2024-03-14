@@ -192,3 +192,90 @@ bool SingleSortedLinkedList::delAllRepetitions(int element)
 	return isHaveThatElemet;
 
 }
+
+void SingleSortedLinkedList::menu()
+{
+	Student::russianAlphabet();
+	while (true)
+	{
+		std::cout << "Выберете операцию которую хотите совершить со списком: " << std::endl;
+		std::cout << "1 - добавить элемент в список" << std::endl;
+		std::cout << "2 - добавить элемент в конкретную позицию" << std::endl;
+		std::cout << "3 - удалить первое вхождение элемента" << std::endl;
+		std::cout << "4 - удалить все вхождения элемента" << std::endl;
+		std::cout << "5 - удалить все повторения элемента" << std::endl;
+		std::cout << "6 - вывести все элементы списка" << std::endl;
+		std::cout << "7 - вывести размер списка" << std::endl;
+		std::cout << "8 - вывести максимальный элемент списка" << std::endl;
+		std::cout << "9 - вывести минимальный элемент списка" << std::endl;
+		std::cout << "0 - выйти" << std::endl;
+
+		int options = Student::inputIntOptions();
+		switch (options)
+		{
+		case 1:
+			{std::cout << "Введите элемент который хотите добавить в список: ";
+			int element;
+			std::cin >> element;
+			insert(element);
+			}
+			break;
+		case 2:
+		{
+			{std::cout << "Введите элемент который хотите добавить в список: ";
+			int element;
+			std::cin >> element;
+			std::cout << "Введите позицию на которую вы хотите добавить элемент: ";
+			int position;
+			std::cin >> position;
+			insert(element, position);
+			}
+
+		}
+		break;
+		case 3:
+		{
+			std::cout << "Введите элемент для   удаления: ";
+			int element;
+			std::cin >> element;
+			delFirstOccurrence(element);
+
+		}
+		break;
+		case 4:
+		{
+			std::cout << "Введите элемент для   удаления: ";
+			int element;
+			std::cin >> element;
+			delAllOccurrence(element);
+		}
+		break;
+		case 5:
+		{
+			std::cout << "Введите элемент для   удаления: ";
+			int element;
+			std::cin >> element;
+			delAllRepetitions(element);
+		}
+		break;
+		case 6:
+			std::cout << "Все эелементы списка: " << std::endl;
+			printList();
+			break;
+		case 7:
+			std::cout << "Размер списка: " << countList() << std::endl;
+			break;
+		case 8:
+			std::cout << "Максимальный элемент списка: " << findMax() << std::endl;
+			break;
+		case 9:
+			std::cout << "Минимальный элемент списка: " << findMin() << std::endl;
+			break;
+		case 0:
+			return;
+		default:
+			std::cout << "Неверная операция" << std::endl;
+			break;
+		}
+	}
+}

@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "Student.h"
 
 class StackChar
 {
@@ -22,6 +23,8 @@ public:
 
 	bool isEmpty();
 	int size();
+
+	void menu();
 private:
 
 	class StackNode

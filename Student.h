@@ -30,6 +30,8 @@ public:
 
 	void printStudent();
 
+	void addStudent();
+
 	bool operator<(const Student& other);
 	bool operator>(const Student& other);
 

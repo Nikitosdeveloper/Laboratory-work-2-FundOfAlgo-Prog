@@ -61,6 +61,66 @@ int StackStudent::size()
 	return size_;
 }
 
+void StackStudent::menu()
+{
+	Student::russianAlphabet();
+	while (true)
+	{
+		std::cout << "Выберете операцию которую хотите совершить со стеком: " << std::endl;
+		std::cout << "1 - добавить студента в стек" << std::endl;
+		std::cout << "2 - извлечь студента из стека" << std::endl;
+		std::cout << "3 - показать верхнего студента стека" << std::endl;
+		std::cout << "4 - получить размер стека" << std::endl;
+		std::cout << "5 - проверить стек на пустоту" << std::endl;
+		std::cout << "6 - выйти" << std::endl;
+
+		int options = Student::inputIntOptions();
+		switch (options)
+		{
+		case 1:
+			{
+				Student student;
+				student.addStudent();
+				push(student);
+			}
+		break;
+		case 2:
+		{
+			Student student = remove();
+			if (student == Student()) {
+				std::cout << "Стек пустой" << std::endl;
+			}
+			else {
+				std::cout << "Студент извлечённый из стека: " << std::endl;
+				student.printStudent();
+			}
+
+		}
+		break;
+		case 3:
+			std::cout << "Верхний элемент стека: " << std::endl;
+			getTop().printStudent();
+			break;
+		case 4:
+			std::cout << "Размер стека: " << size() << std::endl;
+			break;
+		case 5:
+			if (isEmpty()) {
+				std::cout << "Стек пустой" << std::endl;
+			}
+			else {
+				std::cout << "Стек не пустой" << std::endl;
+			}
+			break;
+		case 6:
+			return;
+		default:
+			std::cout << "Неверная операция" << std::endl;
+			break;
+		}
+	}
+}
+
 void StackStudent::releaseQueue_(StackNode* ptr)
 {
 	if (ptr != nullptr && ptr->nextNode != nullptr) {

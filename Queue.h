@@ -18,6 +18,8 @@ public:
 
 	bool isEmpty();
 
+	void menu();
+
 private:
 	class ListNode
 	{

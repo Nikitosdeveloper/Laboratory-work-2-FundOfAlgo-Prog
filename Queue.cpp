@@ -73,6 +73,66 @@ bool Queue::isEmpty()
 	return (size_==0);
 }
 
+void Queue::menu()
+{
+	Student::russianAlphabet();
+	while (true)
+	{
+		std::cout << "¬ыберете операцию которую хотите совершить с очередью: " << std::endl;
+		std::cout << "1 - добавить студента в очередь" << std::endl;
+		std::cout << "2 - извлечь студента из очерели" << std::endl;
+		std::cout << "3 - показать всех студентов в очереди" << std::endl;
+		std::cout << "4 - получить размер очереди" << std::endl;
+		std::cout << "5 - проверить очередь на пустоту" <<std::endl;
+		std::cout << "6 - выйти" << std::endl;
+		std::cout << "¬аша операци€: ";
+		int options = Student::inputIntOptions();
+		switch (options)
+		{
+		case 1:
+		{
+			Student student;
+			student.addStudent();
+			add(student);
+		}
+		break;
+		case 2:
+		{
+			Student student = remove();
+			if (student == Student()) {
+				std::cout << "ќчередь пуста€" << std::endl;
+			}
+			else {
+				std::cout << "—тудент извлечЄнный из очереди: " << std::endl;
+				student.printStudent();
+			}
+				
+			}
+			break;
+		case 3:
+			print();
+			break;
+		case 4:
+			std::cout << "–азмер очереди: " << size() << std::endl;
+			break;
+		case 5:
+			if (isEmpty()) {
+				std::cout << "ќчередь пуста€" << std::endl;
+			}
+			else {
+				std::cout << "ќчередь не пуста€" << std::endl;
+			}
+			break;
+		case 6:
+			return;
+		default:
+			std::cout << "Ќеверна€ операци€" << std::endl;
+			break;
+		}
+	}
+	
+}
+
 void Queue::releaseQueue_(ListNode* ptr)
 {
 	if (ptr!=nullptr && ptr->nextNode != nullptr) {

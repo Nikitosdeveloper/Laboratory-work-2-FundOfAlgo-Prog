@@ -48,6 +48,18 @@ void Student::printStudent()
 	std::cout << std::endl;
 }
 
+void Student::addStudent()
+{
+	printf("¬ведите информацию о новом студенте:\n");
+	surname_ = Student::inputSurname();
+	inicials_ = Student::inputInitials();
+	yearOfBirth_ = Student::inputYearOfBirth();
+	yearOfAdmission_ = Student::inputYearOfAdmission(yearOfBirth_);
+	studentsRecordBook_.physicsMark = Student::inputMark(Student::CODE_PHYSICS);
+	studentsRecordBook_.higherMathMark = Student::inputMark(Student::CODE_HIGHER_MATH);
+	studentsRecordBook_.computerScienceMark = Student::inputMark(Student::CODE_COMPUTER_SCIENCE);
+}
+
 bool Student::operator<(const Student& other)
 {
 	return this->surname_ < other.surname_;
@@ -285,6 +297,9 @@ int Student::inputIntOptions()
 	bool isIncorrect;
 
 	getline(std::cin,options);
+	if (options == "") {
+		getline(std::cin, options);
+	}
 	deleteBeginsAndEndsSpaces(options);
 	isIncorrect = false;
 	for (int i = 0; options[i] != '\0'; i++) {
@@ -292,6 +307,9 @@ int Student::inputIntOptions()
 			isIncorrect = true;
 			break;
 		}
+	}
+	if (options == "") {
+		isIncorrect = true;
 	}
 	if (isIncorrect) {
 		return 0;

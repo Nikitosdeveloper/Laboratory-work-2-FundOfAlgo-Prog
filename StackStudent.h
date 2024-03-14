@@ -16,6 +16,8 @@ public:
 	bool isEmpty();
 	int size();
 
+	void menu();
+
 private:
 
 	class StackNode
