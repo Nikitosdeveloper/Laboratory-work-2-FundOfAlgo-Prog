@@ -195,7 +195,7 @@ bool SingleSortedLinkedList::delAllRepetitions(int element)
 
 void SingleSortedLinkedList::menu()
 {
-	Student::russianAlphabet();
+	InputCheck::russianAlphabet();
 	while (true)
 	{
 		std::cout << "¬ыберете операцию которую хотите совершить со списком: " << std::endl;
@@ -209,25 +209,22 @@ void SingleSortedLinkedList::menu()
 		std::cout << "8 - вывести максимальный элемент списка" << std::endl;
 		std::cout << "9 - вывести минимальный элемент списка" << std::endl;
 		std::cout << "0 - выйти" << std::endl;
-
-		int options = Student::inputIntOptions();
+		std::cout << "¬аша операци€: ";
+		int options = InputCheck::inputIntOptions();
 		switch (options)
 		{
 		case 1:
-			{std::cout << "¬ведите элемент который хотите добавить в список: ";
-			int element;
-			std::cin >> element;
+			{std::cout << "¬ведите элемент который хотите добавить в список" << std::endl;
+			int element = InputCheck::inputInt();
 			insert(element);
 			}
 			break;
 		case 2:
 		{
-			{std::cout << "¬ведите элемент который хотите добавить в список: ";
-			int element;
-			std::cin >> element;
-			std::cout << "¬ведите позицию на которую вы хотите добавить элемент: ";
-			int position;
-			std::cin >> position;
+			{std::cout << "¬ведите элемент который хотите добавить в список" << std::endl;
+			int element = InputCheck::inputInt();
+			std::cout << "¬ведите позицию на которую вы хотите добавить элемент" << std::endl;
+			int position = InputCheck::inputInt();
 			insert(element, position);
 			}
 
@@ -235,26 +232,23 @@ void SingleSortedLinkedList::menu()
 		break;
 		case 3:
 		{
-			std::cout << "¬ведите элемент дл€   удалени€: ";
-			int element;
-			std::cin >> element;
+			std::cout << "¬ведите элемент дл€ удалени€" << std::endl;
+			int element = InputCheck::inputInt();
 			delFirstOccurrence(element);
 
 		}
 		break;
 		case 4:
 		{
-			std::cout << "¬ведите элемент дл€   удалени€: ";
-			int element;
-			std::cin >> element;
+			std::cout << "¬ведите элемент дл€ удалени€" << std::endl;
+			int element = InputCheck::inputInt();
 			delAllOccurrence(element);
 		}
 		break;
 		case 5:
 		{
-			std::cout << "¬ведите элемент дл€   удалени€: ";
-			int element;
-			std::cin >> element;
+			std::cout << "¬ведите элемент дл€ удалени€" << std::endl;
+			int element = InputCheck::inputInt();
 			delAllRepetitions(element);
 		}
 		break;

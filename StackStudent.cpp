@@ -63,7 +63,7 @@ int StackStudent::size()
 
 void StackStudent::menu()
 {
-	Student::russianAlphabet();
+	InputCheck::russianAlphabet();
 	while (true)
 	{
 		std::cout << "Выберете операцию которую хотите совершить со стеком: " << std::endl;
@@ -74,7 +74,7 @@ void StackStudent::menu()
 		std::cout << "5 - проверить стек на пустоту" << std::endl;
 		std::cout << "6 - выйти" << std::endl;
 
-		int options = Student::inputIntOptions();
+		int options = InputCheck::inputIntOptions();
 		switch (options)
 		{
 		case 1:

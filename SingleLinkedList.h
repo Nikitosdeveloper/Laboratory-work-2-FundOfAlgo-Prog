@@ -1,5 +1,6 @@
 #pragma once
 #include "Student.h"
+#include "InputCheck.h"
 #include<iostream>
 #include <windows.h>
 

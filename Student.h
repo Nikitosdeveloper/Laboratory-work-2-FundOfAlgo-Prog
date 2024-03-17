@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <Windows.h>
+#include "InputCheck.h"
 
 
 
@@ -38,25 +39,6 @@ public:
 	bool operator==(const Student& other);
 
 	void calculateMiddleMark();
-
-	static void russianAlphabet();
-
-	static std::string inputSurname();
-	static std::string inputInitials();
-	static int inputYearOfBirth();
-	static int inputYearOfAdmission(int yearOfBirth);
-
-	static int inputMark(int codeOfDiscipline);
-
-	static int inputIntOptions();
-
-	static void deleteBeginsAndEndsSpaces(std::string& str);
-
-	static const int CODE_PHYSICS = 1;
-	static const int CODE_HIGHER_MATH = 2;
-	static const int CODE_COMPUTER_SCIENCE = 3;
-
-	
 
 private:
 

@@ -5,14 +5,14 @@ void StudentList::addStudent()
 	countStudents++;
 
 	printf("Введите информацию о новом студенте:\n");
-	std::string surname = Student::inputSurname();
-	std::string inicials = Student::inputInitials();
-	int yearOfBirth = Student::inputYearOfBirth();
-	int yearOfAdmission = Student::inputYearOfAdmission(yearOfBirth);
+	std::string surname = InputCheck::inputSurname();
+	std::string inicials = InputCheck::inputInitials();
+	int yearOfBirth = InputCheck::inputYearOfBirth();
+	int yearOfAdmission = InputCheck::inputYearOfAdmission(yearOfBirth);
 	RecordBook studentRecordBook;
-	studentRecordBook.physicsMark = Student::inputMark(Student::CODE_PHYSICS);
-	studentRecordBook.higherMathMark = Student::inputMark(Student::CODE_HIGHER_MATH);
-	studentRecordBook.computerScienceMark = Student::inputMark(Student::CODE_COMPUTER_SCIENCE);
+	studentRecordBook.physicsMark = InputCheck::inputMark(InputCheck::CODE_PHYSICS);
+	studentRecordBook.higherMathMark = InputCheck::inputMark(InputCheck::CODE_HIGHER_MATH);
+	studentRecordBook.computerScienceMark = InputCheck::inputMark(InputCheck::CODE_COMPUTER_SCIENCE);
 
 
 	Student student(surname,inicials,yearOfBirth,yearOfAdmission,studentRecordBook);
@@ -42,7 +42,7 @@ void StudentList::updateStudent()
 		do {
 			printf("Выберете номер студента, информацию о котором вы хотите изменить: ");
 
-			index = Student::inputIntOptions();
+			index = InputCheck::inputIntOptions();
 			if (index <= 0 || index > countStudents) {
 				index = 0;
 				printf("Вы ввели некорректный номер студента, попробуйте ещё раз\n");
@@ -69,24 +69,24 @@ void StudentList::updateStudent()
 			printf("4 - год поступления в БГУИР\n");
 			printf("5 - оценку в зачётке\n");
 			printf("Параметр для изменения: ");
-			options = Student::inputIntOptions();
+			options = InputCheck::inputIntOptions();
 			switch (options)
 			{
 			case 1:
 			{
-				student.surname_ = Student::inputSurname();
+				student.surname_ = InputCheck::inputSurname();
 			}
 			break;
 			case 2:
 			{
-				 student.inicials_ = Student::inputSurname();
+				 student.inicials_ = InputCheck::inputSurname();
 			}
 			break;
 			case 3:
-				student.yearOfBirth_ = Student::inputYearOfBirth();
+				student.yearOfBirth_ = InputCheck::inputYearOfBirth();
 				break;
 			case 4:
-				student.yearOfAdmission_ = Student::inputYearOfAdmission(student.yearOfBirth_);
+				student.yearOfAdmission_ = InputCheck::inputYearOfAdmission(student.yearOfBirth_);
 				break;
 			case 5:
 				int disciplineIndex;
@@ -96,17 +96,17 @@ void StudentList::updateStudent()
 					printf("2 - высшая математика\n");
 					printf("3 - информатика\n");
 					printf("Номер дисциплины: ");
-					disciplineIndex = Student::inputIntOptions();
+					disciplineIndex = InputCheck::inputIntOptions();
 					switch (disciplineIndex)
 					{
-					case Student::CODE_PHYSICS:
-						student.studentsRecordBook_.physicsMark = Student::inputMark(Student::CODE_PHYSICS);
+					case InputCheck::CODE_PHYSICS:
+						student.studentsRecordBook_.physicsMark = InputCheck::inputMark(InputCheck::CODE_PHYSICS);
 						break;
-					case Student::CODE_HIGHER_MATH:
-						student.studentsRecordBook_.higherMathMark = Student::inputMark(Student::CODE_HIGHER_MATH);
+					case InputCheck::CODE_HIGHER_MATH:
+						student.studentsRecordBook_.higherMathMark = InputCheck::inputMark(InputCheck::CODE_HIGHER_MATH);
 						break;
-					case Student::CODE_COMPUTER_SCIENCE:
-						student.studentsRecordBook_.computerScienceMark = Student::inputMark(Student::CODE_COMPUTER_SCIENCE);
+					case InputCheck::CODE_COMPUTER_SCIENCE:
+						student.studentsRecordBook_.computerScienceMark = InputCheck::inputMark(InputCheck::CODE_COMPUTER_SCIENCE);
 						break;
 					default:
 						disciplineIndex = 0;
@@ -135,7 +135,7 @@ void StudentList::deleteStudent()
 		do {
 			printf("Выберете номер студента, информацию о котором вы удалить: ");
 
-			index = Student::inputIntOptions();
+			index = InputCheck::inputIntOptions();
 			if (index <= 0 || index > countStudents) {
 				index = 0;
 				printf("Вы ввели некорректный номер студента, попробуйте ещё раз\n");
@@ -297,7 +297,7 @@ void StudentList::sortStudent()
 			printf("1 - по фамилии(в алфавитном порядке)\n");
 			printf("2 - по среднему баллу\n");
 			printf("Ваш параметр: ");
-			options = Student::inputIntOptions();
+			options = InputCheck::inputIntOptions();
 			isIncorrect = false;
 			if (options != 1 && options != 2) {
 				isIncorrect = true;
@@ -458,7 +458,7 @@ void StudentList::writeToFile()
 
 void StudentList::menu()
 {
-	Student::russianAlphabet();
+	InputCheck::russianAlphabet();
 
 	printf("Вас приветствует система учёта студентов БГУИР\n");
 
@@ -475,7 +475,7 @@ void StudentList::menu()
 		printf("8 - отсортировать всех список студентов\n");
 		printf("9 - выйти из системы учёта студентов БГУИР\n");
 		printf("Ваша команда: ");
-		int options = Student::inputIntOptions();
+		int options = InputCheck::inputIntOptions();
 
 		switch (options)
 		{

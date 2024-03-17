@@ -45,14 +45,14 @@
     <ClInclude Include="SingleLinkedList.h">
       <Filter>Файлы заголовков\SingleList</Filter>
     </ClInclude>
-    <ClInclude Include="SingleStudentLinkedList.h">
-      <Filter>Файлы заголовков\SingleList</Filter>
-    </ClInclude>
     <ClInclude Include="Queue.h">
       <Filter>Файлы заголовков\Queue</Filter>
     </ClInclude>
     <ClInclude Include="StudentList.h">
       <Filter>Файлы заголовков\SingleList</Filter>
+    </ClInclude>
+    <ClInclude Include="InputCheck.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -71,14 +71,14 @@
     <ClCompile Include="SingleLinkedList.cpp">
       <Filter>Исходные файлы\SinglieList</Filter>
     </ClCompile>
-    <ClCompile Include="SingleStudentLinkedList.cpp">
-      <Filter>Исходные файлы\SinglieList</Filter>
-    </ClCompile>
     <ClCompile Include="Queue.cpp">
       <Filter>Исходные файлы\Queue</Filter>
     </ClCompile>
     <ClCompile Include="StudentList.cpp">
       <Filter>Исходные файлы\SinglieList</Filter>
+    </ClCompile>
+    <ClCompile Include="InputCheck.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

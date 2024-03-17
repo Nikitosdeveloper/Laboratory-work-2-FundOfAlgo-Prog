@@ -75,7 +75,7 @@ bool Queue::isEmpty()
 
 void Queue::menu()
 {
-	Student::russianAlphabet();
+	InputCheck::russianAlphabet();
 	while (true)
 	{
 		std::cout << "Выберете операцию которую хотите совершить с очередью: " << std::endl;
@@ -86,7 +86,7 @@ void Queue::menu()
 		std::cout << "5 - проверить очередь на пустоту" <<std::endl;
 		std::cout << "6 - выйти" << std::endl;
 		std::cout << "Ваша операция: ";
-		int options = Student::inputIntOptions();
+		int options = InputCheck::inputIntOptions();
 		switch (options)
 		{
 		case 1:

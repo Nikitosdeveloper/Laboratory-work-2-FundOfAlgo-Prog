@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "Student.h"
+#include "InputCheck.h"
 
 class StackChar
 {

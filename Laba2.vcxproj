@@ -127,18 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="InputCheck.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="SingleLinkedList.h" />
-    <ClInclude Include="SingleStudentLinkedList.h" />
     <ClInclude Include="StackChar.h" />
     <ClInclude Include="StackStudent.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="StudentList.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="InputCheck.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="SingleLinkedList.cpp" />
-    <ClCompile Include="SingleStudentLinkedList.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="StackChar.cpp" />
     <ClCompile Include="StackStudent.cpp" />

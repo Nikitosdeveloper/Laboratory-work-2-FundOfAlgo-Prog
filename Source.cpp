@@ -6,17 +6,17 @@
 #include "StudentList.h"
 
 void menu() {
-	Student::russianAlphabet();
+	InputCheck::russianAlphabet();
 	
 	bool isIncorrect = true;
 	while (isIncorrect)
 	{
 		std::cout << "Выберете структуру данных с которой вы будете работать" << std::endl;
-		std::cout << "1 - односвязный списко" << std::endl;
+		std::cout << "1 - односвязный список" << std::endl;
 		std::cout << "2 - очередь" << std::endl;
 		std::cout << "3 - стек" << std::endl;
 		std::cout << "Выбранная структура: ";
-		int options = Student::inputIntOptions();
+		int options = InputCheck::inputIntOptions();
 
 		switch (options)
 		{
@@ -26,7 +26,7 @@ void menu() {
 				std::cout << "1 - Числа" << std::endl;
 				std::cout << "2 - студенты" << std::endl;
 				std::cout << "Ваш тип: " << std::endl;
-				int options = Student::inputIntOptions();
+				int options = InputCheck::inputIntOptions();
 				switch (options)
 				{
 				case 1:
@@ -63,13 +63,13 @@ void menu() {
 				std::cout << "1 - Символы" << std::endl;
 				std::cout << "2 - студенты" << std::endl;
 				std::cout << "Ваш тип: " << std::endl;
-				int options = Student::inputIntOptions();
+				int options = InputCheck::inputIntOptions();
 			switch (options)
 			{
 				case 1:
 				{
 					std::cout << "Введите максимальный размер стека: " << std::endl;
-					int maxSize = Student::inputIntOptions();
+					int maxSize = InputCheck::InputUnsignedInt();
 					StackChar st(maxSize);
 					st.menu();
 

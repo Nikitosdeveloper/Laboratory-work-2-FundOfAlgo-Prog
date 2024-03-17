@@ -66,8 +66,7 @@ void StackChar::print()
 void StackChar::inputBeforEtalon()
 {
 	if (etalon_ != '\0') {
-		char element;
-		std::cin >> element;
+		char element = InputCheck::inputChar();
 		while (element != etalon_)
 		{
 			if (size_ == maxSize_) {
@@ -75,7 +74,7 @@ void StackChar::inputBeforEtalon()
 				return;
 			}
 			push(element);
-			std::cin >> element;
+			element = InputCheck::inputChar();
 		}
 	}
 }
@@ -97,7 +96,7 @@ int StackChar::size()
 
 void StackChar::menu()
 {
-	Student::russianAlphabet();
+	InputCheck::russianAlphabet();
 	while (true)
 	{
 		std::cout << "Выберете операцию которую хотите совершить со стеком: " << std::endl;
@@ -110,15 +109,15 @@ void StackChar::menu()
 		std::cout << "7 - получить размер стека" << std::endl;
 		std::cout << "8 - проверить стек на пустоту" << std::endl;
 		std::cout << "9 - выйти" << std::endl;
+		std::cout << "Выбранная операция: ";
 
-		int options = Student::inputIntOptions();
+		int options = InputCheck::inputIntOptions();
 		switch (options)
 		{
 		case 1:
 		{
-			std::cout << "Символ, который вы хотите добавить в стек: " << std::endl;
-			char c;
-			std::cin >> c;
+			std::cout << "Символ, который вы хотите добавить в стек" << std::endl;
+			char c = InputCheck::inputChar();
 			push(c);
 		}
 		break;
@@ -147,10 +146,11 @@ void StackChar::menu()
 			inputBeforEtalon();
 			break;
 		case 6:
-			std::cout << "Введите новый эталонный элемент: ";
-			char c;
-			std::cin >> c;
+			{
+			std::cout << "Введите новый эталонный элемент" << std::endl;
+			char c = InputCheck::inputChar();
 			setEtalon(c);
+			}
 			break;
 		case 7:
 			std::cout << "Размер стека: " << size() << std::endl;
